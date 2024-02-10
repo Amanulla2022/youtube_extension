@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Aman YouTube Extension",
+  "description": "Saving timeStops in YouTube video ",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "background": {
+    "service_worker": "service.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/bookmark.png"],
+      "matches": ["https://*.youtube.com/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Aman YT Bookmarks",
+    "default_icon": "images/save.png"
+  },
+  "author": {
+    "name": "Amanulla Mulla",
+    "email": "amanmulla167@gmail.com"
+  },
+  "icons": {
+    "64": "images/save.png",
+    "128": "images/save.png"
+  }
+}
