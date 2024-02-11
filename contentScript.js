@@ -14,12 +14,26 @@
       currentVideo = videoId;
       // console.log(videoId);
       newVideoLoaded();
+    } else if (type === "PLAY") {
+      youtubePlayer.currentTime = value;
+    } else if (type === "DELETE") {
+      currentVideoBookmarks = currentVideoBookmarks.filter(
+        (b) => b.time != value
+      );
+      chrome.storage.sync.set({
+        [currentVideo]: JSON.stringify(currentVideoBookmarks),
+      });
+
+      response(currentVideoBookmarks);
     }
   });
 
   // fetch the bookmarks using promise
   // we are checking our current video is exist in bookmark or in the storage else return empty array
-  const fetchBookMark = () => {
+  const fetchBookMark = async () => {
+    if (!currentVideo) {
+      return Promise.reject("currentVideo is not defined");
+    }
     return new Promise((resolve) => {
       chrome.storage.sync.get([currentVideo], (obj) => {
         resolve(obj[currentVideo] ? JSON.parse(obj[currentVideo]) : []);
@@ -82,5 +96,5 @@ const getTime = (time) => {
   let date = new Date(0);
   date.setSeconds(time);
 
-  return date.toISOString(), substr(11, 8);
+  return date.toISOString().substr(11, 8);
 };

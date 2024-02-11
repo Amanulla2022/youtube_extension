@@ -4,19 +4,81 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f2f2f2;
+}
+
 .container {
-  width: 15rem;
+  width: 20rem;
+  margin: 1.25rem auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1);
 }
 
 .title {
-  color: rgb(146, 41, 244);
-  text-align: center;
-  background-color: rgb(139, 249, 213);
+  color: #4caf50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.title p {
+  text-transform: uppercase;
+  color: rgb(255, 0, 0);
 }
 
 .not-yt-image {
-  margin: 1rem;
-  height: 3rem;
-  width: 3rem;
+  margin: 0.625rem;
+  height: 5rem;
+  width: 5rem;
+}
+
+.bookmark {
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  display: flex;
+  margin-bottom: 0.625rem;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  background-color: #f9f9f9;
+}
+
+.bookmark-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+
+.bookmark-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookmark-controls img {
+  cursor: pointer;
+  margin: 0 5px;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.row {
   text-align: center;
+  color: #777;
+  margin: 0.625rem 0;
+}
+
+.ytp-button.bookmark-btn {
+  cursor: pointer;
+}
+
+.ytp-button.bookmark-btn:hover {
+  opacity: 0.8;
 }

@@ -9,7 +9,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, tab) => {
   // Checking that the tab url is of youtube or not
   if (tab.url && tab.url.includes("youtube.com/watch")) {
     // unique id for each parameter
-    const queryParameters = tab.url.split("?")[0];
+    const queryParameters = tab.url.split("?")[1];
     // URLSearchParams its a interface to work with URL
     const urlParameters = new URLSearchParams(queryParameters);
     // console.log(urlParameters);
