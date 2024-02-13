@@ -5,8 +5,9 @@
 The Aman YouTube Extension enhances your YouTube watching experience by allowing you to save timestamps as bookmarks and quickly revisit them. This Chrome extension provides a seamless way to navigate within videos, making it easy to jump to your favorite moments.
 
 ## Demo Video Link
-[Click](https://drive.google.com/file/d/1zGOEMcbUoOKr0NcilIyE-rBzEhivwSVF/view?usp=sharing){:target="_blank"}
+[Click](https://drive.google.com/file/d/1zGOEMcbUoOKr0NcilIyE-rBzEhivwSVF/view?usp=sharing)
 
+## Images
 
 ### Features:
 
