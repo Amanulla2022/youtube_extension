@@ -36,7 +36,8 @@ const viewBookmarks = (currentBookmarks = []) => {
       addNewBookmark(bookmarksElement, bookmark);
     }
   } else {
-    bookmarksElement.innerHTML = ' <i class="row">No bookmarks to show</i> ';
+    bookmarksElement.innerHTML =
+      ' <i class="row">Ab sahi page pe aagaya Bhai :)</i> ';
   }
 };
 
@@ -106,6 +107,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   } else {
     const container = document.getElementsByClassName("container")[0];
     container.innerHTML =
-      '<div class="title"><p> This is not a YouTube Video page. </p> <img class="not-yt-image" src="images/ye-nahi-chalega.png" alt="dummy image" /></div>';
+      '<div class="title"><p> Ye youtube page nahi hai bhai chalaja :)</p> <img class="not-yt-image" src="images/ye-nahi-chalega.png" alt="dummy image" /></div>';
   }
 });
